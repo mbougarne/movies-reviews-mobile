@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { container, text } from '../styles';
 
-export default function Home(props: any)
+export default function Home({ navigation } : Record<string, any>)
 {
   return (
     <View style={[container.safe, container.container, container.dark]}>
@@ -11,7 +11,7 @@ export default function Home(props: any)
       </Text>
       <Button 
         title="About"
-        onPress={() => props.navigation.navigate('About us')}
+        onPress={() => navigation.navigate('About')}
         color="#ea1c2d"
       />
     </View>
