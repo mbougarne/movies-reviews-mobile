@@ -29,7 +29,7 @@ const Header = ({ title, navigation } : Record<string, any>) => {
 const styles = StyleSheet.create({
   headerContainer: {
     paddingTop: 60,
-    paddingBottom: 40,
+    paddingBottom: 30,
     paddingHorizontal: 20,
     flex: 1,
     backgroundColor: '#191919',
