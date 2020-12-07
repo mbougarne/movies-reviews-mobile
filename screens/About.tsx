@@ -5,7 +5,7 @@ import { container, text } from '../styles';
 export default function About({ navigation } : Record<string, any>)
 {
   return (
-    <View style={[container.safe, container.container, container.dark]}>
+    <View style={[container.container, container.dark]}>
       <Text style={[text.headline, text.primary]}>
         About Scree
       </Text>
