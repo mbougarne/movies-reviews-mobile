@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, FlatList, ScrollView, Pressable } from 'react-native';
 import { container, text } from '../styles';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,8 +19,26 @@ export default function Home({ navigation } : Record<string, any>)
     dispatch(topRatedShows());
   }, [])
 
-  const renderItem = ({ item } : Record<string, any>) => (
-    <Poster item={item} />
+  const renderMovie = ({ item } : Record<string, any>) => (
+    <Pressable onPress={() => {
+      navigation.navigate('Single', {
+        item,
+        type: 'movie'
+      })
+    }}>
+      <Poster item={item} />
+    </Pressable>
+  );
+  
+  const renderShow = ({ item } : Record<string, any>) => (
+    <Pressable onPress={() => {
+      navigation.navigate('Single', {
+        item,
+        type: 'show'
+      })
+    }}>
+      <Poster item={item} />
+    </Pressable>
   );
 
   return (
@@ -32,7 +50,7 @@ export default function Home({ navigation } : Record<string, any>)
           </Text>
           <FlatList
             data={movies}
-            renderItem={renderItem}
+            renderItem={renderMovie}
             horizontal={true}
             initialNumToRender={3}
             nestedScrollEnabled={true}
@@ -45,7 +63,7 @@ export default function Home({ navigation } : Record<string, any>)
           </Text>
           <FlatList
             data={shows}
-            renderItem={renderItem}
+            renderItem={renderShow}
             horizontal={true}
             initialNumToRender={3}
             nestedScrollEnabled={true}
