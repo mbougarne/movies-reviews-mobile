@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @expo/vector-icons/Ionicons
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D @types/expo-web-browser
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\m\bin;C:\Users\m\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\m\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PowerShell\6;C:\Program Files\Symfony;C:\Go\bin;C:\Program Files\dotnet;C:\Program Files (x86)\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\OpenJDK\openjdk-8u275-b01\bin;C:\Program Files\CMake\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Ruby27-x64\bin;C:\Users\m\.cargo\bin;C:\Users\m\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\m\AppData\Local\Programs\Python\Python38-32;C:\Users\m\AppData\Local\Microsoft\WindowsApps;C:\Users\m\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\m\AppData\Roaming\Composer\vendor\bin;C:\tools\dart-sdk\bin;C:\Users\m\AppData\Roaming\Pub\Cache\bin;C:\flutter\bin;C:\Users\m\go\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\wamp64\bin\php\php7.4.1;C:\wamp64\bin\mysql\mysql8.0.18\bin;C:\Users\m\AppData\Roaming\npm;C:\Program Files\JetBrains\PyCharm Community Edition 2020.1\bin;C:\Users\m\AppData\Local\Android\sdk\platform-tools;C:\Program Files\VideoLAN\VLC\plugins;C:\watchman\bin;C:\Users\m\AppData\Local\Android\Sdk\platform-tools;C:\cygwin64\bin;C:\Users\m\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\m\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PowerShell\6;C:\Program Files\Symfony;C:\Go\bin;C:\Program Files\dotnet;C:\Program Files (x86)\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\OpenJDK\openjdk-8u275-b01\bin;C:\Program Files\CMake\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Ruby27-x64\bin;C:\Users\m\.cargo\bin;C:\Users\m\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\m\AppData\Local\Programs\Python\Python38-32;C:\Users\m\AppData\Local\Microsoft\WindowsApps;C:\Users\m\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\m\AppData\Roaming\Composer\vendor\bin;C:\tools\dart-sdk\bin;C:\Users\m\AppData\Roaming\Pub\Cache\bin;C:\flutter\bin;C:\Users\m\go\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\wamp64\bin\php\php7.4.1;C:\wamp64\bin\mysql\mysql8.0.18\bin;C:\Users\m\AppData\Roaming\npm;C:\Program Files\JetBrains\PyCharm Community Edition 2020.1\bin;C:\Users\m\AppData\Local\Android\sdk\platform-tools;C:\Program Files\VideoLAN\VLC\plugins;C:\watchman\bin;C:\Users\m\AppData\Local\Android\Sdk\platform-tools;C:\cygwin64\bin;C:\Users\m\AppData\Local\Yarn\bin
 
 Yarn version: 
   1.22.5
@@ -14,8 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@expo%2fvector-icons/Ionicons: Request "https://registry.yarnpkg.com/@expo%2fvector-icons/Ionicons" returned a 405
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66106:18)
+  Error: https://registry.yarnpkg.com/@types%2fexpo-web-browser: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
       at Request.emit (events.js:311:20)
       at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
@@ -39,10 +39,12 @@ npm manifest:
     "dependencies": {
       "@react-native-community/masked-view": "0.1.10",
       "@react-navigation/bottom-tabs": "^5.11.2",
+      "@react-navigation/drawer": "^5.11.4",
       "@react-navigation/native": "^5.8.10",
       "@react-navigation/stack": "^5.12.8",
       "expo": "~39.0.2",
       "expo-status-bar": "~1.0.2",
+      "expo-web-browser": "~8.5.0",
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
@@ -1342,6 +1344,14 @@ Lockfile:
       query-string "^6.13.6"
       react-is "^16.13.0"
   
+  "@react-navigation/drawer@^5.11.4":
+    version "5.11.4"
+    resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-5.11.4.tgz#8cc4c6ccd2579e78ee1d84948e2eedb2aff9d891"
+    integrity sha512-6Wpv2Ng9+ZMcmZ8AhwAvV+QvWERPlPUr2IH9ogufGu/fc/ppURStdJcMhHZPH4oOc1OcPow87Ew4oaMmjX4Pvw==
+    dependencies:
+      color "^3.1.3"
+      react-native-iphone-x-helper "^1.3.0"
+  
   "@react-navigation/native@^5.8.10":
     version "5.8.10"
     resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.8.10.tgz#3fe806abff9efb085bcf595212803dd05a1347ca"
@@ -2144,6 +2154,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
     integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
   
+  compare-urls@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/compare-urls/-/compare-urls-2.0.0.tgz#9b378c4abd43980a8700fffec9afb85de4df9075"
+    integrity sha512-eCJcWn2OYFEIqbm70ta7LQowJOOZZqq1a2YbbFCFI1uwSvj+TWMwXVn7vPR1ceFNcAIt5RSTDbwdlX82gYLTkA==
+    dependencies:
+      normalize-url "^2.0.1"
+  
   compare-versions@^3.4.0:
     version "3.6.0"
     resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
@@ -2690,6 +2707,13 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.0.2.tgz#2441a77c56be31597898337b0d086981f2adefd8"
     integrity sha512-5313u744GcLzCadxIPXyTkYw77++UXv1dXCuhYDxDbtsEf93iMra7WSvzyE8a7mRQLIIPRuGnBOdrL/V1C7EOQ==
+  
+  expo-web-browser@~8.5.0:
+    version "8.5.0"
+    resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.5.0.tgz#294fac01d9d7c8e496fddeb0ca7cf58d96a1f159"
+    integrity sha512-ysfGgTd16gjTAcxbywR/07Pye6XUZDoQsfeo+BEzP2kRgCWGJ5ll5WfCVNxcHInp9eo8G+n5nKqhd7Fv4gX7rg==
+    dependencies:
+      compare-urls "^2.0.0"
   
   expo@~39.0.2:
     version "39.0.5"
@@ -3392,6 +3416,11 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
     integrity sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
+  
+  is-plain-obj@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+    integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
   
   is-plain-object@^2.0.3, is-plain-object@^2.0.4:
     version "2.0.4"
@@ -4343,6 +4372,15 @@ Lockfile:
     dependencies:
       remove-trailing-separator "^1.0.1"
   
+  normalize-url@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-2.0.1.tgz#835a9da1551fa26f70e92329069a23aa6574d7e6"
+    integrity sha512-D6MUW4K/VzoJ4rJ01JFKxDrtY1v9wrgzCX5f2qj/lzH1m/lW6MhUZFKerVsnyjOhOsYzI9Kqqak+10l4LvLpMw==
+    dependencies:
+      prepend-http "^2.0.0"
+      query-string "^5.0.1"
+      sort-keys "^2.0.0"
+  
   npm-run-path@^2.0.0:
     version "2.0.2"
     resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -4640,6 +4678,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/pouchdb-collections/-/pouchdb-collections-1.0.1.tgz#fe63a17da977611abef7cb8026cb1a9553fd8359"
     integrity sha1-/mOhfal3YRq+98uAJssalVP9g1k=
   
+  prepend-http@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
+    integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+  
   pretty-format@^23.6.0:
     version "23.6.0"
     resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-23.6.0.tgz#5eaac8eeb6b33b987b7fe6097ea6a8a146ab5760"
@@ -4713,6 +4756,15 @@ Lockfile:
     version "6.9.4"
     resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
     integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+  
+  query-string@^5.0.1:
+    version "5.1.1"
+    resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
+    integrity sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==
+    dependencies:
+      decode-uri-component "^0.2.0"
+      object-assign "^4.1.0"
+      strict-uri-encode "^1.0.0"
   
   query-string@^6.13.6:
     version "6.13.7"
@@ -5291,6 +5343,13 @@ Lockfile:
       source-map-resolve "^0.5.0"
       use "^3.1.0"
   
+  sort-keys@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
+    integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
+    dependencies:
+      is-plain-obj "^1.0.0"
+  
   source-map-resolve@^0.5.0:
     version "0.5.3"
     resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.3.tgz#190866bece7553e1f8f267a2ee82c606b5509a1a"
@@ -5378,6 +5437,11 @@ Lockfile:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
     integrity sha1-kdX1Ew0c75bc+n9yaUUYh0HQnuQ=
+  
+  strict-uri-encode@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+    integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
   
   strict-uri-encode@^2.0.0:
     version "2.0.0"
