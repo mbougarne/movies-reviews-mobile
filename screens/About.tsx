@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, Text, Pressable } from 'react-native';
+import { StyleSheet, View, Text, Pressable, Dimensions } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import { Video } from 'expo-av';
+import VideoPlayer from 'expo-video-player'
 
 import { container, text } from '../styles';
 
@@ -15,7 +16,6 @@ export default function About({ navigation } : Record<string, any>)
   const openGitHub = () => {
     WebBrowser.openBrowserAsync('https://github.com/mbougarne/movies-reviews');
   };
-
 
   return (
     <View style={[container.container, container.dark, styles.innerContainer]}>
@@ -33,17 +33,18 @@ export default function About({ navigation } : Record<string, any>)
           onPress={openGitHub}>
           <Text style={styles.btnText}>GitHub</Text>
         </Pressable>
-      </View>
-      <View style={styles.videoContainer}>
-        <Video
-          source={{ uri: 'http://staging.mbougarne.me/2020-12-05_21-41-58.mp4' }}
-          rate={1.0}
-          volume={1.0}
-          isMuted={false}
-          resizeMode="cover"
-          shouldPlay
-          isLooping
-          style={{ width: 320, height: 280 }}
+        <VideoPlayer
+          videoProps={{
+            shouldPlay: false,
+            resizeMode: Video.RESIZE_MODE_CONTAIN,
+            source: { uri: 'http://staging.mbougarne.me/2020-12-05_21-41-58.mp4' },
+            useNativeControls: true
+          }}
+          inFullscreen={true}
+          switchToLandscape={() => true}
+          width={360}
+          height={300}
+          videoBackground="transparent"
         />
       </View>
     </View>
@@ -72,9 +73,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     textAlign: 'center'
-  },
-  videoContainer: {
-    marginTop: 50,
-    justifyContent: 'center'
   }
 })
