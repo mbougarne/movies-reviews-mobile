@@ -2,8 +2,7 @@ import React from 'react';
 import { Ionicons  } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from '../screens/Home';
-import AboutScreen from '../screens/About';
+import { HomeStack, AboutStack} from './Stack';
 
 const Tap = createBottomTabNavigator();
 
@@ -20,14 +19,15 @@ export default function TabNavigator() {
         activeTintColor: '#ea1c2d',
         inactiveTintColor: '#222',
       }}
+      initialRouteName="Home"
     >
       <Tap.Screen 
         name="Home"
-        component={HomeScreen}
+        component={HomeStack}
       />
       <Tap.Screen 
         name="About"
-        component={AboutScreen}
+        component={AboutStack}
       />
     </Tap.Navigator>
   );
