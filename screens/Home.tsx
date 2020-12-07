@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, View, Text, FlatList, ScrollView } from 'react-native';
 import { container, text } from '../styles';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,12 +20,12 @@ export default function Home({ navigation } : Record<string, any>)
   }, [])
 
   const renderItem = ({ item } : Record<string, any>) => (
-    <Poster movie={item} />
+    <Poster item={item} />
   );
 
   return (
     <View style={[container.container, container.dark]}>
-      <View style={styles.wrapper}>
+      <ScrollView style={styles.wrapper} nestedScrollEnabled={true}>
         <View style={styles.innerContainer}>
           <Text style={[text.headline, text.white, text.upper]}>
             Top Rated Movies
@@ -35,6 +35,7 @@ export default function Home({ navigation } : Record<string, any>)
             renderItem={renderItem}
             horizontal={true}
             initialNumToRender={3}
+            nestedScrollEnabled={true}
             keyExtractor={item => item.id.toString()}
           />
         </View>
@@ -47,10 +48,11 @@ export default function Home({ navigation } : Record<string, any>)
             renderItem={renderItem}
             horizontal={true}
             initialNumToRender={3}
+            nestedScrollEnabled={true}
             keyExtractor={item => item.id.toString()}
           />
         </View>
-      </View>
+      </ScrollView>
     </View>
   )
 }
@@ -58,9 +60,13 @@ export default function Home({ navigation } : Record<string, any>)
 const styles = StyleSheet.create({
   wrapper: {
     paddingTop: 70,
+    paddingBottom: 50,
   },
   innerContainer: {
     paddingTop: 25,
     paddingLeft: 10,
+  },
+  listPadding: {
+    paddingBottom: 20
   }
 })

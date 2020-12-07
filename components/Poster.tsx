@@ -3,8 +3,8 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import MVDB from '../configs'
 
-const Movie = ({ movie }: Record<string, any>) => {
-  const posterLink = MVDB.IMAGE_BASE_URL + MVDB.POSTER_SIZE + '/' + movie.poster_path;
+const Movie = ({ item }: Record<string, any>) => {
+  const posterLink = MVDB.IMAGE_BASE_URL + MVDB.POSTER_SIZE + '/' + item.poster_path;
   return (
     <View>
       <Image
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     margin: 5,
     padding: 5,
     width: 180,
-    height: 240,
+    height: 275,
   }
 })
 

@@ -8,7 +8,16 @@ import { MoviesStack, ShowsStack } from './Stack';
 
 export default function Drawer() {
   return (
-    <Navigator initialRouteName="Home">
+    <Navigator 
+      initialRouteName="Home"
+      drawerStyle={{ backgroundColor: '#222' }}
+      drawerContentOptions={{
+        activeBackgroundColor: '#ea1c2d',
+        activeTintColor: '#fff',
+        labelStyle: {
+          color: '#fff'
+        }
+      }}>
       <Screen name="Home" component={MainScreen} />
       <Screen name="PopularMovies" component={MoviesStack} />
       <Screen name="PopularShows" component={ShowsStack} />
