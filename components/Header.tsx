@@ -2,7 +2,11 @@ import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const Header = ({ title } : Record<string, any>) => {
+const Header = ({ title, navigation } : Record<string, any>) => {
+
+  const onToggle = () => {
+    navigation.toggleDrawer();
+  }
 
   return (
     <View style={styles.headerContainer}>
@@ -10,6 +14,7 @@ const Header = ({ title } : Record<string, any>) => {
         name="ios-menu"
         color="white"
         size={32}
+        onPress={onToggle}
       />
       <Text style={styles.title}>{title}</Text>
       <Image

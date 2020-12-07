@@ -19,7 +19,6 @@ export default function TabNavigator() {
         activeTintColor: '#ea1c2d',
         inactiveTintColor: '#222',
       }}
-      initialRouteName="Home"
     >
       <Tap.Screen 
         name="Home"
